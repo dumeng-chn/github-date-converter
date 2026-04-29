@@ -4,6 +4,7 @@ import monkey, { cdn } from 'vite-plugin-monkey';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
     const isDev = mode === 'development';
+    const isGreasyFork = mode === 'greasyfork';
 
     return {
         plugins: [
@@ -27,10 +28,15 @@ export default defineConfig(({ mode }) => {
                     license: 'MIT',
                     homepageURL: 'https://github.com/dumeng-chn/github-date-converter',
                     supportURL: 'https://github.com/dumeng-chn/github-date-converter/issues',
-                    updateURL:
-                        'https://raw.githubusercontent.com/dumeng-chn/github-date-converter/master/dist/github-date-converter.user.js',
-                    downloadURL:
-                        'https://raw.githubusercontent.com/dumeng-chn/github-date-converter/master/dist/github-date-converter.user.js',
+                    // 如果是发布到 GreasyFork 的版本，不包含更新链接，由平台接管
+                    ...(isGreasyFork
+                        ? {}
+                        : {
+                              updateURL:
+                                  'https://raw.githubusercontent.com/dumeng-chn/github-date-converter/main/dist/github-date-converter.user.js',
+                              downloadURL:
+                                  'https://raw.githubusercontent.com/dumeng-chn/github-date-converter/main/dist/github-date-converter.user.js',
+                          }),
                 },
                 build: {
                     fileName: `github-date-converter${isDev ? '.dev' : ''}.user.js`,
@@ -41,7 +47,7 @@ export default defineConfig(({ mode }) => {
             }),
         ],
         build: {
-            outDir: isDev ? 'dist-dev' : 'dist',
+            outDir: isDev ? 'dist-dev' : isGreasyFork ? 'dist-greasyfork' : 'dist',
             emptyOutDir: true,
             minify: false,
         },
