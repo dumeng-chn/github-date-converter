@@ -6,14 +6,20 @@
 <p align="center"><b>GitHub 日期转换器</b></p>
 
 <p align="center">
+  <a href="https://github.com/dumeng-chn/github-date-converter">
+    <img src="https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github" alt="repo" />
+  </a>
+  <a href="https://github.com/dumeng-chn/github-date-converter/issues">
+    <img src="https://img.shields.io/github/issues/dumeng-chn/github-date-converter?style=flat-square&logo=github&color=orange" alt="issues" />
+  </a>
   <a href="https://github.com/dumeng-chn/github-date-converter/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/dumeng-chn/github-date-converter?style=flat-square" alt="license" />
+    <img src="https://img.shields.io/github/license/dumeng-chn/github-date-converter?style=flat-square&logo=read-the-docs&color=blue" alt="license" />
   </a>
   <a href="https://github.com/dumeng-chn/github-date-converter">
-    <img src="https://img.shields.io/github/stars/dumeng-chn/github-date-converter?style=flat-square" alt="stars" />
+    <img src="https://img.shields.io/github/stars/dumeng-chn/github-date-converter?style=flat-square&logo=github" alt="stars" />
   </a>
   <a href="https://greasyfork.org/zh-CN/scripts/575860-github-date-converter">
-    <img src="https://img.shields.io/greasyfork/dt/575860?style=flat-square&color=black" alt="installs" />
+    <img src="https://img.shields.io/greasyfork/dt/575860?style=flat-square&logo=greasy-fork&color=black" alt="installs" />
   </a>
 </p>
 
@@ -28,7 +34,7 @@
 
 ---
 
-## Features (功能特性)
+## 🚀 Features (功能特性)
 
 - **📅 Custom Format (自定义格式)**: Select from presets or use `YYYY`, `MM`, `DD` placeholders to define your own pattern.  
   支持选择预设或使用 `YYYY`, `MM`, `DD` 等占位符灵活配置你喜好的日期显示格式。
@@ -41,7 +47,7 @@
 - **⚡ Non-Destructive (非侵入式修改)**: Modifies text nodes directly without replacing elements. Ensures compatibility with GitHub's React hydration.  
   直接修改文本节点和 Shadow DOM，不破坏原始 DOM 结构。完美兼容 GitHub 的 React 水合逻辑和页面交互。
 
-## Installation (安装)
+## 📦 Installation (安装)
 
 1. Install a Userscript manager like [Tampermonkey](https://www.tampermonkey.net/).  
    安装脚本管理器，例如 [Tampermonkey](https://www.tampermonkey.net/)。
@@ -50,7 +56,11 @@
    - **[GreasyFork](https://greasyfork.org/zh-CN/scripts/575860-github-date-converter)** (Recommended / 推荐)
    - **[GitHub](https://raw.githubusercontent.com/dumeng-chn/github-date-converter/main/dist/github-date-converter.user.js)** (Direct / 直接安装)
 
-## Usage (使用说明)
+## 📖 Usage (使用说明)
 
 Open the Tampermonkey menu on any GitHub page to access the settings and customize the script's behavior.  
 在任何 GitHub 页面打开 Tampermonkey 菜单即可访问设置并自定义脚本行为。
+
+## 📜 License (授权)
+
+MIT License
