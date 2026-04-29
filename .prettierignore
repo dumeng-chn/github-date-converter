@@ -1,3 +1,5 @@
 dist/
+dist-dev/
+dist-greasyfork/
 node_modules/
 pnpm-lock.yaml

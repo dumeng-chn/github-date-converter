@@ -19,6 +19,6 @@ export default defineConfig([
         },
     },
     {
-        ignores: ['dist/', 'node_modules/'],
+        ignores: ['dist/', 'dist-dev/', 'dist-greasyfork/', 'node_modules/'],
     },
 ]);
