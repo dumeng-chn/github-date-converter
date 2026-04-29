@@ -2,7 +2,7 @@
 // @name            GitHub Date Converter
 // @name:zh         GitHub 日期转换器
 // @namespace       github-date-converter
-// @version         0.2.0
+// @version         0.3.0
 // @author          dumeng
 // @description     Convert GitHub dates to standard numerical formats, supports custom formats.
 // @description:zh  将 GitHub 页面中的日期转换为标准的数字格式，支持自定义格式
@@ -172,7 +172,7 @@
         }
       }
     });
-    observer.observe(document.body, {
+    observer.observe(document.documentElement, {
       childList: true,
       subtree: true,
       attributes: true,
@@ -259,5 +259,16 @@
   processAll();
   startObserver();
   registerMenuCommands();
+  document.addEventListener("turbo:load", () => {
+    reprocessAll();
+  });
+  document.addEventListener("pjax:end", () => {
+    reprocessAll();
+  });
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      reprocessAll();
+    }
+  });
 
 })(dayjs);
