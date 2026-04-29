@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      dayjs:
+        specifier: ^1.11.20
+        version: 1.11.20
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.5.2
@@ -713,6 +717,9 @@ packages:
 
   cuint@0.2.2:
     resolution: {integrity: sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==}
+
+  dayjs@1.11.20:
+    resolution: {integrity: sha512-YbwwqR/uYpeoP4pu043q+LTDLFBLApUP6VxRihdfNTqu4ubqMlGDLd6ErXhEgsyvY0K6nCs7nggYumAN+9uEuQ==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -1955,6 +1962,8 @@ snapshots:
       which: 2.0.2
 
   cuint@0.2.2: {}
+
+  dayjs@1.11.20: {}
 
   debug@4.4.3:
     dependencies:

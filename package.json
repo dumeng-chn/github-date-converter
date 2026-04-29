@@ -1,10 +1,19 @@
 {
-    "name": "github-human-date",
+    "name": "github-date-converter",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.1.0",
+    "description": "Convert GitHub dates to standard numerical formats, supports custom formats.",
+    "author": "dumeng",
+    "license": "MIT",
+    "homepage": "https://github.com/dumeng-chn/github-date-converter",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dumeng-chn/github-date-converter.git"
+    },
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "watch": "vite build --watch",
         "build": "tsc && vite build",
         "preview": "vite preview",
         "lint": "eslint .",
@@ -33,5 +42,8 @@
         "typescript-eslint": "^8.59.1",
         "vite": "^7.3.2",
         "vite-plugin-monkey": "^7.1.9"
+    },
+    "dependencies": {
+        "dayjs": "^1.11.20"
     }
 }
