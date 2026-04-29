@@ -207,7 +207,7 @@ function startObserver(): void {
         }
     });
 
-    observer.observe(document.body, {
+    observer.observe(document.documentElement, {
         childList: true,
         subtree: true,
         attributes: true,
@@ -317,6 +317,26 @@ function registerMenuCommands(): void {
 }
 
 // ── 入口 ─────────────────────────────────────────────────────
+// 立即运行一次转换
 processAll();
 startObserver();
 registerMenuCommands();
+
+// 监听 GitHub 的导航事件 (Turbo)
+// GitHub 使用 Turbo Drive 替换页面内容，这不会触发传统的 DOMContentLoaded
+document.addEventListener('turbo:load', () => {
+    reprocessAll();
+});
+
+// 兼容某些可能仍在使用 PJAX 的情况或老旧环境
+document.addEventListener('pjax:end', () => {
+    reprocessAll();
+});
+
+// 监听浏览器 bfcache (前进/后退缓存) 恢复
+// 当从 bfcache 恢复时，脚本可能需要重新运行转换逻辑
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        reprocessAll();
+    }
+});
