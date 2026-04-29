@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import monkey from 'vite-plugin-monkey';
+import monkey, { cdn } from 'vite-plugin-monkey';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,6 +19,7 @@ export default defineConfig({
                 icon: 'https://github.githubassets.com/favicons/favicon.svg',
                 match: ['https://github.com/*'],
                 grant: ['GM_getValue', 'GM_setValue', 'GM_registerMenuCommand', 'GM_unregisterMenuCommand'],
+                compatible: 'chrome, firefox, edge, safari',
                 'run-at': 'document-end',
                 license: 'MIT',
                 homepageURL: 'https://github.com/dumeng-chn/github-date-converter',
@@ -28,6 +29,14 @@ export default defineConfig({
                 downloadURL:
                     'https://raw.githubusercontent.com/dumeng-chn/github-date-converter/master/dist/github-date-converter.user.js',
             },
+            build: {
+                externalGlobals: {
+                    dayjs: cdn.jsdelivr('dayjs', 'dayjs.min.js'),
+                },
+            },
         }),
     ],
+    build: {
+        minify: false,
+    },
 });
