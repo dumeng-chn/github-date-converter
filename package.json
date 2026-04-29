@@ -1,7 +1,7 @@
 {
     "name": "github-date-converter",
     "private": true,
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Convert GitHub dates to standard numerical formats, supports custom formats.",
     "author": "dumeng",
     "license": "MIT",

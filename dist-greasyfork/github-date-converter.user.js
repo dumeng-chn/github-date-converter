@@ -12,8 +12,6 @@
 // @homepageURL     https://github.com/dumeng-chn/github-date-converter
 // @source          https://github.com/dumeng-chn/github-date-converter.git
 // @supportURL      https://github.com/dumeng-chn/github-date-converter/issues
-// @downloadURL     https://raw.githubusercontent.com/dumeng-chn/github-date-converter/main/dist/github-date-converter.user.js
-// @updateURL       https://raw.githubusercontent.com/dumeng-chn/github-date-converter/main/dist/github-date-converter.user.js
 // @match           https://github.com/*
 // @require         https://cdn.jsdelivr.net/npm/dayjs@1.11.20/dayjs.min.js
 // @grant           GM_getValue
